@@ -1,21 +1,30 @@
-app-title-text
-{
+.app-title-text {
 font-family:Happy Monkey;
 font-size: 36px;
 font-weight:400;
-font-color:#4A4A4A;
+color:#4A4A4A;
+text-align:center;
+padding:18px;
 }
 
-top-banner-card
-{
-color:#CBCBCB;
-height:90px;
+.top-banner-card {
+background-color:#CBCBCB;
+opacity:100%;
+height:80px;
+width:100%;
+position:sticky;
 }
 
-app-menu-text
-{
+.app-menu-text {
 font-family:Happy Monkey;
 font-size: 16px;
 font-weight:400;
 font-color:#000000;
+}
+
+.background {
+background-image:url("../img/Background.jpg");
+background-size:cover;
+background-repeat:no-repeat;
+opacity:75%;
 }
