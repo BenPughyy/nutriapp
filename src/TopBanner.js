@@ -3,8 +3,8 @@ import './NutriApp.css';
 
 export class TopBanner extends React.Component {
 render() {
-    return <div class="top-banner-card">
-                <div class="app-title-text">Nutri App</div>
+    return <div className="top-banner-card">
+                <div className="app-title-text">Nutri App</div>
            </div>
          }
 };
