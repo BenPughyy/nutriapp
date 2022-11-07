@@ -1,10 +1,11 @@
 import { FC } from 'react';
+import * as SC from './ButtonStyle';
 
 const LoginButton: FC = () => {
   return (
-    <div>
-    <div>Login/SignUp</div>
-    </div>
+    <SC.ButtonStyle>
+        <SC.ButtonFont>Login/SignUp</SC.ButtonFont>
+    </SC.ButtonStyle>
   );
 };
 
