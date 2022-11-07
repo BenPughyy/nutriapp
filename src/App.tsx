@@ -13,6 +13,7 @@ const App = () => {
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundAttachment: 'fixed',
+        opacity: 0.7,
       }}
     >
       <TopBanner />
