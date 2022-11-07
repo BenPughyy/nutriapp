@@ -1,4 +1,4 @@
-import TopBanner from './components/TopBanner';
+import TopBanner from './components/TopBanner/TopBanner';
 import BackgroundImg from './img/Background.jpg';
 
 const App = () => {
