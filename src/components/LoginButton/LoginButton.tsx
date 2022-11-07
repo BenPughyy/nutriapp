@@ -4,7 +4,7 @@ import * as SC from './styled';
 
 const LoginButton: FC = () => {
   return (
-    <BS.ButtonContainer>Login/Sign Up</BS.ButtonContainer>
+    <SC.ButtonContainer>Login/Sign Up</SC.ButtonContainer>
   );
 };
 
