@@ -1,12 +1,10 @@
 import { FC } from 'react';
 import { Button } from 'semantic-ui-react';
-import * as SC from './ButtonStyle';
+import * as BS from './buttonstyle';
 
 const LoginButton: FC = () => {
   return (
-    <SC.ButtonContainer>
-        <SC.ButtonFont>Login/SignUp</SC.ButtonFont>
-    </SC.ButtonContainer>
+    <BS.ButtonContainer>Login/Sign Up</BS.ButtonContainer>
   );
 };
 
