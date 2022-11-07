@@ -1,4 +1,5 @@
-import TopBanner from './components/TopBanner';
+import TopBanner from './components/TopBanner/TopBanner';
+import LoginButton from './components/LoginButton/LoginButton';
 import BackgroundImg from './img/Background.jpg';
 
 const App = () => {
@@ -15,6 +16,7 @@ const App = () => {
       }}
     >
       <TopBanner />
+      <LoginButton />
     </div>
   );
 };
