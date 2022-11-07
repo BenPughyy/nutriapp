@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { Button } from 'semantic-ui-react';
-import * as BS from './buttonstyle';
+import * as SC from './styled';
 
 const LoginButton: FC = () => {
   return (

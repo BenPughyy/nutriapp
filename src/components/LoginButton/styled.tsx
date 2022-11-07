@@ -3,8 +3,13 @@ import { Button } from 'semantic-ui-react';
 
 export const ButtonContainer = styled.button`
 //Container Styles
+    position: absolute;
+    top: 75%;
+    bottom: 19%;
+    left: 43%;
+    right: 43%;
     background-color: #d9d9d9;
-    height: 7%;
+    height: 6%;
     width: 14%;
     display: flex;
     justify-content: center;
