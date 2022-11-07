@@ -17,5 +17,5 @@ export const ButtonContainer = styled.button`
 //Text CSS Styles
     font-weight: 400;
     font-family: Happy Monkey;
-    font-size: 16px;
+    font-size: 18px;
 `;
