@@ -3,9 +3,7 @@ import { Button } from 'semantic-ui-react';
 import * as SC from './styled';
 
 const LoginButton: FC = () => {
-  return (
-    <SC.ButtonContainer>Login/Sign Up</SC.ButtonContainer>
-  );
+  return <SC.StyledButton>Login/Sign Up</SC.StyledButton>;
 };
 
 export default LoginButton;
