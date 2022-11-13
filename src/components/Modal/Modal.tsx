@@ -25,11 +25,9 @@ const getModal = (
   setShowModal: React.Dispatch<React.SetStateAction<boolean>>,
   additionalProps?: Record<string, unknown>,
 ) => {
-  console.log(modal);
   let addProps;
   switch (modal) {
     case ModalTypes.LOGIN:
-      console.log('Getting here');
       addProps = additionalProps as unknown as LoginModalProps;
       return <LoginModal setShowModal={setShowModal} {...addProps} />;
   }
