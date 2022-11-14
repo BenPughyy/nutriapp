@@ -109,88 +109,10 @@ export const defaultTheme: DefaultTheme = {
   },
 };
 
-export const StyledAvatarCircle = styled.div<{ avatar: string }>`
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  background-color: ${({ theme }) => theme.colors.general.white};
-  background-image: url(${({ avatar }) => avatar});
-  background-position: center;
-  background-size: 80%;
-  background-repeat: no-repeat;
-`;
-
-export const StyledMenuText = styled.h5`
-  float: left;
-  margin-left: ${({ theme }) => theme.margin.xlarge};
-  margin-top: 2px;
-`;
-
 export const StyledText = styled.p`
   ${({ theme }) => theme.typography.body};
   font-size: ${({ theme }) => theme.typography.sizes.p};
   color: ${({ theme }) => theme.colors.system.offBlack};
-`;
-
-export const StyledSubHeader = styled(StyledText)<{
-  marginBottom?: string;
-}>`
-  ${({ theme }) => theme.typography.header};
-  font-size: ${({ theme }) => theme.typography.sizes.h4};
-  margin-bottom: ${({ marginBottom }) => (marginBottom ? marginBottom : 0)};
-  color: ${({ theme }) => theme.colors.system.offBlack};
-`;
-
-export const StyledBodySubHeader = styled(StyledText)`
-  ${({ theme }) => theme.typography.header};
-  font-size: ${({ theme }) => theme.typography.sizes.h5};
-  margin-bottom: ${({ theme }) => theme.margin.standard};
-  color: ${({ theme }) => theme.colors.system.offBlack};
-`;
-
-export const StyledFeatureH1 = styled.h1`
-  ${({ theme }) => theme.typography.featureHeader};
-  font-size: ${({ theme }) => theme.typography.sizes.featureH1};
-  margin-bottom: ${({ theme }) => theme.margin.large};
-  color: ${({ theme }) => theme.colors.system.white};
-  letter-spacing: 2px;
-  text-transform: uppercase;
-`;
-
-export const StyledFeatureH2 = styled.h2`
-  ${({ theme }) => theme.typography.header};
-  font-size: ${({ theme }) => theme.typography.sizes.featureH2};
-  margin-bottom: ${({ theme }) => theme.margin.large};
-  color: ${({ theme }) => theme.colors.system.black};
-  letter-spacing: 2px;
-  text-transform: uppercase;
-`;
-
-export const StyledFeatureH3 = styled.h3`
-  ${({ theme }) => theme.typography.header};
-  font-size: ${({ theme }) => theme.typography.sizes.featureH3};
-  margin-bottom: ${({ theme }) => theme.margin.large};
-  color: ${({ theme }) => theme.colors.system.offBlack};
-  letter-spacing: 2px;
-  text-transform: uppercase;
-`;
-
-export const StyledFeatureH4 = styled.h4`
-  ${({ theme }) => theme.typography.header};
-  font-size: ${({ theme }) => theme.typography.sizes.featureH4};
-  margin-bottom: ${({ theme }) => theme.margin.standard};
-  color: ${({ theme }) => theme.colors.system.offBlack};
-  letter-spacing: 2px;
-  text-transform: uppercase;
-`;
-
-export const StyledFeatureH5 = styled.h5`
-  ${({ theme }) => theme.typography.header};
-  font-size: ${({ theme }) => theme.typography.sizes.featureH5};
-  margin-bottom: ${({ theme }) => theme.margin.standard};
-  color: ${({ theme }) => theme.colors.system.offBlack};
-  letter-spacing: 2px;
-  text-transform: uppercase;
 `;
 
 export const StyledH1 = styled.h1<{ black?: boolean; noMargin?: boolean }>`
@@ -237,216 +159,11 @@ export const StyledErrorText = styled.p`
   color: ${({ theme }) => theme.colors.general.red};
 `;
 
-// Top Bar Headers
-export const TopBarHeaderTextWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  transition: opacity 0.95s;
-
-  :hover {
-    cursor: pointer;
-    opacity: 0.5;
-  }
-`;
-
-export const TopBarHeaderLabel = styled(StyledText)<{ lightTheme?: boolean }>`
-  font-size: ${({ theme }) => theme.typography.sizes.smaller};
-  ${({ theme }) => theme.typography.header};
-  text-transform: uppercase;
-
-  color: ${({ theme, lightTheme }) =>
-    lightTheme ? theme.colors.system.offBlack : theme.colors.system.white};
-
-  margin-left: ${({ theme }) => theme.margin.standard};
-  margin-bottom: ${({ theme }) => theme.margin.small};
-`;
-
-export const TopBarHeaderTitle = styled(StyledText)<{ lightTheme?: boolean }>`
-  ${({ theme }) => theme.typography.header};
-  font-size: ${({ theme }) => theme.typography.sizes.h5};
-
-  color: ${({ theme, lightTheme }) =>
-    lightTheme ? theme.colors.system.offBlack : theme.colors.system.white};
-
-  margin-left: ${({ theme }) => theme.margin.standard};
-`;
-
-export const StyledInputHeader = styled(StyledText)`
-  text-transform: uppercase;
-
-  ${({ theme }) => theme.typography.header};
-  font-size: ${({ theme }) => theme.typography.sizes.smaller};
-  color: ${({ theme }) => theme.colors.system.offBlack};
-
-  margin-bottom: ${({ theme }) => theme.margin.small};
-`;
-
-export const StyledInput = styled(Input)<{
-  width?: string;
-  backgroundColor?: string;
-}>`
-  width: ${({ width }) => (width ? width : '365px')};
-  max-width: 100%;
-
-  > input {
-    background-color: ${({ backgroundColor, theme }) =>
-      backgroundColor ? backgroundColor : theme.colors.system.white} !important;
-
-    &:focus {
-      border-color: ${({ theme }) => theme.colors.general.blue};
-      outline: none;
-    }
-  }
-`;
-
-export const StyledTextArea = styled(TextareaAutosize)`
-  width: 400px;
-  max-width: 100%;
-
-  padding: ${({ theme }) => `${theme.padding.standard} ${theme.margin.large}`};
-
-  border: 1px solid ${({ theme }) => theme.colors.system.grey};
-  border-radius: ${({ theme }) => theme.borders.small};
-
-  &:focus {
-    border-color: ${({ theme }) => theme.colors.general.blue};
-    outline: none;
-  }
-`;
-
-export const StyledDropdown = styled(Dropdown)`
-  width: 365px;
-  max-width: 100%;
-
-  .menu {
-    max-height: 150px !important;
-  }
-`;
-
-export const StyledDropdownWide = styled(Dropdown)`
-  width: 400px;
-
-  margin: ${({ theme }) => `${theme.margin.standard} 0 ${theme.margin.xlarge}`};
-`;
-
-export const StyledDropdownUltraWide = styled(Dropdown)`
-  width: 650px;
-
-  margin: ${({ theme }) => `${theme.margin.standard} 0 ${theme.margin.xlarge}`};
-`;
-
-export const StageWrapper = styled.div`
-  flex-grow: 2;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-`;
-
-export const StageInner = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  padding: ${({ theme }) =>
-    `${theme.padding.xxxlarge} ${theme.padding.xlarge}`};
-`;
-
 export const StageBodyText = styled(StyledText)`
   width: 100%;
   max-width: 700px;
   margin-bottom: ${({ theme }) => theme.margin.xlarge};
   text-align: center;
-`;
-
-export const StyledAccordion = styled(Accordion)`
-  min-width: 350px;
-
-  background-color: ${({ theme }) => theme.colors.system.white};
-  border: 1px solid ${({ theme }) => theme.colors.system.grey};
-  border-radius: ${({ theme }) => theme.borders.radius};
-`;
-
-export const StyledAccordionTitle = styled(Accordion.Title)`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  padding: ${({ theme }) =>
-    `${theme.padding.standard} ${theme.padding.large}`} !important;
-
-  border-bottom: 1px solid ${({ theme }) => theme.colors.system.grey};
-
-  > p {
-    margin: 0;
-  }
-`;
-
-export const StyledAccordionContent = styled(AccordionContent)`
-  background-color: ${({ theme }) => theme.colors.system.offWhite};
-  padding: ${({ theme }) => theme.padding.large} !important;
-
-  border-bottom: 1px solid ${({ theme }) => theme.colors.system.grey};
-
-  &:last-of-type {
-    border: none;
-  }
-
-  > div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    .dropdown {
-      margin: 0;
-    }
-  }
-`;
-
-export const CardEntityWrapper = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-
-  > div {
-    margin: ${({ theme }) => theme.margin.standard};
-  }
-`;
-
-export const ProjectsWrapper = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  position: relative;
-  > div {
-    margin: ${({ theme }) => theme.margin.standard};
-  }
-`;
-
-export const StyledQuestionBuilderContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  > p {
-    margin-bottom: ${({ theme }) => theme.margin.standard};
-  }
-
-  > div:nth-last-child(2) {
-    margin-top: ${({ theme }) => theme.margin.xlarge};
-  }
-  > div:last-child {
-    margin-top: ${({ theme }) => theme.margin.standard};
-  }
-`;
-
-export const EndInputButtonWrapper = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  margin-top: ${({ theme }) => theme.margin.large};
-  > div:last-child {
-    margin-left: ${({ theme }) => theme.margin.large};
-  }
 `;
 
 export const Button = styled.button<{
@@ -497,10 +214,6 @@ export const Button = styled.button<{
     padding: 1px 0 0 0;
     font-size: ${({ theme }) => theme.typography.sizes.h3};
   }
-`;
-
-export const StyledFormHeader = styled(StyledH2)`
-  margin-bottom: ${({ theme }) => theme.margin.xxlarge};
 `;
 
 export const DefaultPopupStyles: CSSProperties = {
@@ -561,6 +274,8 @@ export const PageSearchHeader = styled.div`
     margin: 0;
   }
 `;
+
+export const StyledLabel = styled.label``;
 
 const Theme: FC = ({ children }) => (
   <ThemeProvider theme={defaultTheme}>
