@@ -18,7 +18,7 @@ export const defaultTheme: DefaultTheme = {
       darkGrey: '#C8C8C8',
       darkOffBlack: '#23282F',
 
-      grey: '#E4E4E4',
+      grey: '#cbcbcb',
       navy: '#01203A',
       offBlack: '#2F3640',
       offWhite: '#F0EEEE',
@@ -40,20 +40,27 @@ export const defaultTheme: DefaultTheme = {
 
   typography: {
     header: `
-      font-family: 'Roboto', 'sans-serif';
+      font-family: 'Happy Monkey';
       font-weight: bold;
       margin: 0;
       padding: 0;
     `,
     featureHeader: `
-      font-family: 'AlternateGotNo1D', 'Roboto', 'sans-serif';
+      font-family: 'Happy Monkey';
       font-weight: bold;
       margin: 0;
       padding: 0;
     `,
     body: `
       font-size: 0.9em;
-      font-family: 'Lato', 'sans-serif';
+      font-family: 'Happy Monkey';
+      font-weight: regular;
+      margin: 0 0 1em 0;
+      padding: 0;
+    `,
+    button: `
+      font-size: 0.9em;
+      font-family: 'Happy Monkey';
       font-weight: regular;
       margin: 0 0 1em 0;
       padding: 0;
@@ -154,7 +161,7 @@ export const StyledFeatureH2 = styled.h2`
   ${({ theme }) => theme.typography.header};
   font-size: ${({ theme }) => theme.typography.sizes.featureH2};
   margin-bottom: ${({ theme }) => theme.margin.large};
-  color: ${({ theme }) => theme.colors.system.white};
+  color: ${({ theme }) => theme.colors.system.black};
   letter-spacing: 2px;
   text-transform: uppercase;
 `;
@@ -199,7 +206,7 @@ export const StyledH2 = styled.h2`
   ${({ theme }) => theme.typography.header};
   font-size: ${({ theme }) => theme.typography.sizes.h2};
   margin-bottom: ${({ theme }) => theme.margin.large};
-  color: ${({ theme }) => theme.colors.system.white};
+  color: ${({ theme }) => theme.colors.system.black};
 `;
 
 export const StyledH3 = styled.h3`
@@ -555,7 +562,7 @@ export const PageSearchHeader = styled.div`
   }
 `;
 
-const Theme: FC<PropsWithChildren> = ({ children }) => (
+const Theme: FC = ({ children }) => (
   <ThemeProvider theme={defaultTheme}>
     <GoogleFontLoader
       fonts={[

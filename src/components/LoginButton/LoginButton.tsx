@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import { useDispatch } from 'react-redux';
+import { StyledH2 } from '../../main/theme';
 import { showModal } from '../../store/modal';
 import { ModalTypes } from '../Modal/Modal';
 
@@ -20,7 +21,7 @@ const LoginButton: FC = () => {
         )
       }
     >
-      Login/Sign Up
+      <StyledH2>Login/Sign Up</StyledH2>
     </SC.StyledButton>
   );
 };

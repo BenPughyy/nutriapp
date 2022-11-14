@@ -1,5 +1,6 @@
 import { ReactElement } from 'react';
 import { Provider } from 'react-redux';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 // Store
 import store from '../store/store';
@@ -10,9 +11,11 @@ import Theme from './theme';
 function App(): ReactElement {
   return (
     <Provider store={store}>
-      <Theme>
-        <AppContainer />
-      </Theme>
+      <Router>
+        <Theme>
+          <AppContainer />
+        </Theme>
+      </Router>
     </Provider>
   );
 }

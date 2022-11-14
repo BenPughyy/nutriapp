@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Header } from 'semantic-ui-react';
 
 export const HeaderContainer = styled.div`
-  background-color: #cbcbcb;
+  background-color: ${({ theme }) => theme.colors.system.grey};
   height: 8vh;
   display: flex;
   justify-content: center;

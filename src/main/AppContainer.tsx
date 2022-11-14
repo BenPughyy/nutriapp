@@ -6,11 +6,13 @@ import { RootState } from '../store/rootReducer';
 
 // Components
 import TopBanner from '../components/TopBanner/TopBanner';
-import LoginButton from '../components/LoginButton/LoginButton';
+import Modal from '../components/Modal/Modal';
 
 // Images
 import BackgroundImg from '../img/Background.jpg';
-import Modal from '../components/Modal/Modal';
+
+// Routing
+import Routing from '../routing/Routing';
 
 const AppContainer: FC = () => {
   const modalState = useSelector((state: RootState) => state.modal);
@@ -37,7 +39,7 @@ const AppContainer: FC = () => {
         forceOpen={modalState.forceOpen}
       />
       <TopBanner />
-      <LoginButton />
+      <Routing />
     </div>
   );
 };

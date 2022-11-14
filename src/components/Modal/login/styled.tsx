@@ -19,6 +19,6 @@ export const ButtonContainer = styled.div`
 `;
 
 export const StyledButton = styled(Button)`
-  width: 90px;
+  width: 120px;
   height: 60px;
 `;
