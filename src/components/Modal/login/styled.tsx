@@ -22,3 +22,8 @@ export const StyledButton = styled(Button)`
   width: 120px;
   height: 60px;
 `;
+
+export const StyledCloseButton = styled(Button)`
+  width: 40px;
+  height: 40px;
+`;
