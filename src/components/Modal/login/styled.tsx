@@ -18,12 +18,22 @@ export const ButtonContainer = styled.div`
   align-items: center;
 `;
 
+export const TitleWrapper = styled.div`
+  display:flex !important;
+  justify-content:space-between !important;
+`;
+
 export const StyledButton = styled(Button)`
-  width: 120px;
-  height: 60px;
+  width: 100px;
+  height: 50px;
 `;
 
 export const StyledCloseButton = styled(Button)`
   width: 40px;
   height: 40px;
+  margin-left: 50px !important;
+`;
+
+export const StyledLabel = styled.label`
+  font-family: 'Happy Monkey';
 `;

@@ -65,6 +65,12 @@ export const defaultTheme: DefaultTheme = {
       margin: 0 0 1em 0;
       padding: 0;
     `,
+    label: `
+      font-family: 'Happy Monkey';
+      font-weight: regular;
+      margin: 0 0 0 0;
+      padding: 0;
+    `,
     sizes: {
       p: '1.0em',
       smaller: '0.85em',
@@ -315,6 +321,10 @@ export const StyledTextArea = styled(TextareaAutosize)`
   }
 `;
 
+export const StyledLabel = styled.label`
+  ${({ theme }) => theme.typography.label};
+`;
+
 export const StyledDropdown = styled(Dropdown)`
   width: 365px;
   max-width: 100%;
@@ -506,7 +516,7 @@ export const StyledFormHeader = styled(StyledH2)`
 export const DefaultPopupStyles: CSSProperties = {
   border: 'none',
   borderRadius: `${({ theme }) => theme.borders.radius}`,
-  fontFamily: 'Roboto',
+  fontFamily: 'Happy Monkey',
   fontWeight: 'bold',
 };
 
@@ -566,8 +576,8 @@ const Theme: FC = ({ children }) => (
   <ThemeProvider theme={defaultTheme}>
     <GoogleFontLoader
       fonts={[
-        { font: 'Lato', weights: [400] },
-        { font: 'Roboto', weights: [700] },
+        { font: 'Happy Monkey', weights: [400] },
+        { font: 'Happy Monkey', weights: [700] },
       ]}
     />
     {children}

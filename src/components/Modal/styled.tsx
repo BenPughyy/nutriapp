@@ -20,7 +20,7 @@ export const Wrapper = styled.div<{
 }>`
   display: flex;
 
-  max-width: 95%;
+  max-width: 25%;
   max-height: 95%;
 
   ${({ fullScreen }) =>
@@ -28,7 +28,7 @@ export const Wrapper = styled.div<{
     `width: 1400px;
     max-width: 95%;
     height: 2000px;
-    max-height: 95%;
+    max-height: 50%;
   `};
 
   overflow-y: ${({ scrollable }) => (scrollable ? 'auto' : 'visible')};
