@@ -1,7 +1,7 @@
 import React, { FC, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { Icon, Form } from 'semantic-ui-react';
-import { StyledH1, StyledH4, StyledLabel } from '../../../main/theme';
+import { StyledH1, StyledH4, StyledLabel, ProjectsWrapper } from '../../../main/theme';
 import { hideModal } from '../../../store/modal';
 import * as SC from './styled';
 
@@ -30,12 +30,12 @@ const LoginModal: FC<LoginModalProps> = ({ setShowModal }) => {
 
   return (
     <SC.Wrapper>
-      <SC.TitleWrapper>
+      <ProjectsWrapper>
         <StyledH1 black={true}>Login to Nutri!</StyledH1>
         <SC.StyledCloseButton onClick={closeModal}>
             <Icon name="window close" size="large" style={{ margin: 0 }} />
         </SC.StyledCloseButton>
-      </SC.TitleWrapper>
+      </ProjectsWrapper>
         <Form>
             <Form.Field>
                 <SC.StyledLabel>Username (usually an email address!)</SC.StyledLabel>

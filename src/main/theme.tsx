@@ -428,6 +428,7 @@ export const ProjectsWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   position: relative;
   > div {
     margin: ${({ theme }) => theme.margin.standard};

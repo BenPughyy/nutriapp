@@ -31,10 +31,9 @@ export const StyledButton = styled(Button)`
 export const StyledCloseButton = styled(Button)`
   width: 40px;
   height: 40px;
-  align-items: center;
   position: absolute;
-  top: 30%;
-  right: 38%;
+  top: -65%;
+  left: 150%;
 `;
 
 export const StyledLabel = styled.label`
