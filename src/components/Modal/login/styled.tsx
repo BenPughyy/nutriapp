@@ -20,7 +20,7 @@ export const ButtonContainer = styled.div`
 
 export const TitleWrapper = styled.div`
   display:flex !important;
-  justify-content:space-between !important;
+  justify-content: center !important;
 `;
 
 export const StyledButton = styled(Button)`
@@ -31,7 +31,10 @@ export const StyledButton = styled(Button)`
 export const StyledCloseButton = styled(Button)`
   width: 40px;
   height: 40px;
-  margin-left: 50px !important;
+  align-items: center;
+  position: absolute;
+  top: 30%;
+  right: 38%;
 `;
 
 export const StyledLabel = styled.label`
