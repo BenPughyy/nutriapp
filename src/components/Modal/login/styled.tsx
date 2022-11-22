@@ -7,20 +7,10 @@ export const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
-
+  height: 250px;
+  max-height: 100%;
   width: 800px;
   max-width: 100%;
-`;
-
-export const ButtonContainer = styled.div`
-  display: flex;
-  gap: ${({ theme }) => theme.margin.xlarge};
-  align-items: center;
-`;
-
-export const TitleWrapper = styled.div`
-  display:flex !important;
-  justify-content: center !important;
 `;
 
 export const StyledButton = styled(Button)`
@@ -31,9 +21,7 @@ export const StyledButton = styled(Button)`
 export const StyledCloseButton = styled(Button)`
   width: 40px;
   height: 40px;
-  position: absolute;
-  top: -65%;
-  left: 150%;
+
 `;
 
 export const StyledLabel = styled.label`
