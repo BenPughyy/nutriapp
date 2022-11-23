@@ -62,7 +62,7 @@ export const defaultTheme: DefaultTheme = {
       font-size: 0.9em;
       font-family: 'Happy Monkey';
       font-weight: regular;
-      margin: 0 0 1em 0;
+      margin: 0 0 0 0;
       padding: 0;
     `,
     label: `
