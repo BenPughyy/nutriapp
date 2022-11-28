@@ -27,9 +27,22 @@ export const StyledButton = styled(Button)`
 `;
 
 export const StyledCloseButton = styled(Button)`
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   font-size: 20px !important;
+  margin-right: 0px !important;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  text-align: center !important;
+  align-items: center !important;
+`;
+
+export const CloseButtonContainer = styled.div`
+  display: flex;
+  justify-content: flex-end;
+
 `;
 
 export const StyledLabel = styled.label`
