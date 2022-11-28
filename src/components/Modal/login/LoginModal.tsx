@@ -30,10 +30,12 @@ const LoginModal: FC<LoginModalProps> = ({ setShowModal }) => {
 
   return (
     <SC.Wrapper>
-        <StyledH1 noMargin={true} black={true}>Login to Nutri!</StyledH1>
-        <SC.CloseButtonContainer>
-            <SC.StyledCloseButton onClick={closeModal}>X</SC.StyledCloseButton>
-        </SC.CloseButtonContainer>
+        <SC.ModalHeader>
+            <StyledH1 noMargin={true} black={true}>Login to Nutri!</StyledH1>
+            <SC.CloseButtonContainer>
+                <SC.StyledCloseButton onClick={closeModal}>X</SC.StyledCloseButton>
+            </SC.CloseButtonContainer>
+        </SC.ModalHeader>
         <Form>
             <Form.Field>
                 <SC.StyledLabel>Username (usually an email address!)</SC.StyledLabel>
