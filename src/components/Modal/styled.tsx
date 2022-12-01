@@ -37,7 +37,7 @@ export const Wrapper = styled.div<{
   padding: ${({ theme, fullScreen }) => !fullScreen && theme.padding.xxxlarge};
 
   border: 1px solid ${({ theme }) => theme.colors.system.grey};
-  border-radius: ${({ theme }) => theme.borders.small};
+  border-radius: ${({ theme }) => theme.borders.radius};
 
   opacity: ${({ showModal }) => (showModal ? 1 : 0)};
 

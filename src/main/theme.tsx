@@ -15,7 +15,7 @@ export const defaultTheme: DefaultTheme = {
       darkBlue: '#272C34',
       darkBlueHighlight: '#3D4857',
       darkBlueShadow: '#1B1F24',
-      darkGrey: '#C8C8C8',
+      darkGrey: '#8C8B8B',
       darkOffBlack: '#23282F',
 
       grey: '#cbcbcb',
@@ -55,7 +55,7 @@ export const defaultTheme: DefaultTheme = {
       font-size: 0.9em;
       font-family: 'Happy Monkey';
       font-weight: regular;
-      margin: 0 0 1em 0;
+      margin: 0 0 0 0;
       padding: 0;
     `,
     button: `
@@ -111,7 +111,8 @@ export const defaultTheme: DefaultTheme = {
 
   borders: {
     small: '5px',
-    radius: '10px',
+    radius: '15px',
+    large: '25px',
   },
 };
 
@@ -176,7 +177,7 @@ export const StyledFeatureH3 = styled.h3`
   ${({ theme }) => theme.typography.header};
   font-size: ${({ theme }) => theme.typography.sizes.featureH3};
   margin-bottom: ${({ theme }) => theme.margin.large};
-  color: ${({ theme }) => theme.colors.system.offBlack};
+  color: ${({ theme }) => theme.colors.system.black};
   letter-spacing: 2px;
   text-transform: uppercase;
 `;
@@ -185,7 +186,7 @@ export const StyledFeatureH4 = styled.h4`
   ${({ theme }) => theme.typography.header};
   font-size: ${({ theme }) => theme.typography.sizes.featureH4};
   margin-bottom: ${({ theme }) => theme.margin.standard};
-  color: ${({ theme }) => theme.colors.system.offBlack};
+  color: ${({ theme }) => theme.colors.system.black};
   letter-spacing: 2px;
   text-transform: uppercase;
 `;
@@ -194,7 +195,7 @@ export const StyledFeatureH5 = styled.h5`
   ${({ theme }) => theme.typography.header};
   font-size: ${({ theme }) => theme.typography.sizes.featureH5};
   margin-bottom: ${({ theme }) => theme.margin.standard};
-  color: ${({ theme }) => theme.colors.system.offBlack};
+  color: ${({ theme }) => theme.colors.system.black};
   letter-spacing: 2px;
   text-transform: uppercase;
 `;
