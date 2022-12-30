@@ -2,11 +2,11 @@ import { FC, useState } from 'react';
 import { Rating } from 'semantic-ui-react';
 
 const StarRating: FC = () => {
-  const [ratingState, setRatingState] = useState<any>();
+  const [ratingState, setRatingState] = useState<number>();
 
   // This will set the 'ratingState' to whatever the user clicked
   // Ready to get sent with redux
-  const handleRating = (data) => {
+  const handleRating = (data: number) => {
     setRatingState(data);
   };
 
@@ -16,7 +16,7 @@ const StarRating: FC = () => {
       defaultRating={0}
       maxRating={5}
       size="massive"
-      onRate={(event, data) => handleRating(data.rating)}
+      onRate={(event, data) => handleRating(data.rating as number)}
     />
   );
 };
