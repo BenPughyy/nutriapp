@@ -1,7 +1,21 @@
 import { Button } from 'semantic-ui-react';
 import styled from 'styled-components';
 
-export const Wrapper = styled.div`
+export const FlexWrapper = styled.div`
+  display: flex;
+`;
+
+export const FlexColumnWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const FlexEndJustifiedItem = styled.div`
+  display: flex;
+  justify-content: flex-end;
+`;
+
+export const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -18,7 +32,8 @@ export const ButtonContainer = styled.div`
   align-items: center;
 `;
 
-export const StyledButton = styled(Button)`
-  width: 120px;
-  height: 60px;
+export const StyledButton = styled(Button)<{ width?: number; height?: number }>`
+  width: ${({ width }) => width || 120}px;
+  height: ${({ height }) => height || 60}px;
+  margin: 0;
 `;

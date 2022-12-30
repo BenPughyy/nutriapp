@@ -29,23 +29,28 @@ const LoginModal: FC<LoginModalProps> = ({ setShowModal }) => {
   }, [setShowModal]);
 
   return (
-    <SC.Wrapper>
-      <StyledH1 black={true}>Login</StyledH1>
+    <SC.FlexWrapper>
+      <SC.FlexColumnWrapper>
+        <SC.FlexEndJustifiedItem>
+          <SC.StyledButton width={60} height={45} onClick={closeModal}>
+            <Icon name="window close" size="large" />
+          </SC.StyledButton>
+        </SC.FlexEndJustifiedItem>
+        <SC.ContentWrapper>
+          <StyledH1 black={true}>Login</StyledH1>
 
-      <SC.ButtonContainer>
-        <SC.StyledButton onClick={closeModal}>
-          <Icon name="window close" size="large" style={{ margin: 0 }} />
-        </SC.StyledButton>
+          <SC.ButtonContainer>
+            <SC.StyledButton>
+              <StyledH4> Sign Up</StyledH4>
+            </SC.StyledButton>
 
-        <SC.StyledButton>
-          <StyledH4> Sign Up</StyledH4>
-        </SC.StyledButton>
-
-        <SC.StyledButton>
-          <StyledH4>Login</StyledH4>
-        </SC.StyledButton>
-      </SC.ButtonContainer>
-    </SC.Wrapper>
+            <SC.StyledButton>
+              <StyledH4>Login</StyledH4>
+            </SC.StyledButton>
+          </SC.ButtonContainer>
+        </SC.ContentWrapper>
+      </SC.FlexColumnWrapper>
+    </SC.FlexWrapper>
   );
 };
 
