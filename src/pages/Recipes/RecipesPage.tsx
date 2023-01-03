@@ -16,44 +16,30 @@ const RecipesPage: FC = () => {
   return (
     <Grid columns={3} divided>
       <Grid.Row>
-        <Grid.Column>
-          {recipes.length ? (
-            <Card>
-              <Image
-                src="https://react.semantic-ui.com/images/avatar/large/matthew.png"
-                wrapped
-                ui={false}
-              />
-              <Card.Content>
-                <Card.Header>{recipes[0].title}</Card.Header>
-                <Card.Meta>
-                  <span className="date">Recipe by logged in user</span>
-                </Card.Meta>
-                <Card.Description>{recipes[0].description}</Card.Description>
-              </Card.Content>
-            </Card>
-          ) : (
-            <Image src="https://react.semantic-ui.com/images/wireframe/media-paragraph.png" />
-          )}
-        </Grid.Column>
-        <Grid.Column>
-          <Image src="https://react.semantic-ui.com/images/wireframe/media-paragraph.png" />
-        </Grid.Column>
-        <Grid.Column>
-          <Image src="https://react.semantic-ui.com/images/wireframe/media-paragraph.png" />
-        </Grid.Column>
-      </Grid.Row>
-
-      <Grid.Row>
-        <Grid.Column>
-          <Image src="https://react.semantic-ui.com/images/wireframe/media-paragraph.png" />
-        </Grid.Column>
-        <Grid.Column>
-          <Image src="https://react.semantic-ui.com/images/wireframe/media-paragraph.png" />
-        </Grid.Column>
-        <Grid.Column>
-          <Image src="https://react.semantic-ui.com/images/wireframe/media-paragraph.png" />
-        </Grid.Column>
+        {recipes.length ? (
+          recipes.map((recipe) => {
+            return (
+              <Grid.Column>
+                <Card>
+                  <Image
+                    src="https://react.semantic-ui.com/images/avatar/large/matthew.png"
+                    wrapped
+                    ui={false}
+                  />
+                  <Card.Content>
+                    <Card.Header>{recipe.title}</Card.Header>
+                    <Card.Meta>
+                      <span className="date">Recipe by logged in user</span>
+                    </Card.Meta>
+                    <Card.Description>{recipe.description}</Card.Description>
+                  </Card.Content>
+                </Card>
+              </Grid.Column>
+            );
+          })
+        ) : (
+          <div>NO RECIPES FOUND</div>
+        )}
       </Grid.Row>
     </Grid>
   );
