@@ -20,7 +20,7 @@ export const Wrapper = styled.div<{
 }>`
   display: flex;
 
-  max-width: 95%;
+  max-width: 25%;
   max-height: 95%;
 
   ${({ fullScreen }) =>
@@ -28,16 +28,16 @@ export const Wrapper = styled.div<{
     `width: 1400px;
     max-width: 95%;
     height: 2000px;
-    max-height: 95%;
+    max-height: 50%;
   `};
 
   overflow-y: ${({ scrollable }) => (scrollable ? 'auto' : 'visible')};
 
   background-color: ${({ theme }) => theme.colors.system.white};
-  padding: ${({ theme, fullScreen }) => !fullScreen && theme.padding.xxxlarge};
+  padding: ${({ theme, fullScreen }) => !fullScreen && theme.padding.large};
 
   border: 1px solid ${({ theme }) => theme.colors.system.grey};
-  border-radius: ${({ theme }) => theme.borders.small};
+  border-radius: ${({ theme }) => theme.borders.radius};
 
   opacity: ${({ showModal }) => (showModal ? 1 : 0)};
 

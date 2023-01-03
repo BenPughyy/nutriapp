@@ -1,7 +1,7 @@
 import React, { FC, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { Icon } from 'semantic-ui-react';
-import { StyledH1, StyledH4 } from '../../../main/theme';
+import { Icon, Form } from 'semantic-ui-react';
+import { StyledH1, StyledH4, StyledLabel, ProjectsWrapper } from '../../../main/theme';
 import { hideModal } from '../../../store/modal';
 import * as SC from './styled';
 
@@ -29,28 +29,28 @@ const LoginModal: FC<LoginModalProps> = ({ setShowModal }) => {
   }, [setShowModal]);
 
   return (
-    <SC.FlexWrapper>
-      <SC.FlexColumnWrapper>
-        <SC.FlexEndJustifiedItem>
-          <SC.StyledButton width={60} height={45} onClick={closeModal}>
-            <Icon name="window close" size="large" />
-          </SC.StyledButton>
-        </SC.FlexEndJustifiedItem>
-        <SC.ContentWrapper>
-          <StyledH1 black={true}>Login</StyledH1>
-
-          <SC.ButtonContainer>
-            <SC.StyledButton>
-              <StyledH4> Sign Up</StyledH4>
-            </SC.StyledButton>
-
-            <SC.StyledButton>
-              <StyledH4>Login</StyledH4>
-            </SC.StyledButton>
-          </SC.ButtonContainer>
-        </SC.ContentWrapper>
-      </SC.FlexColumnWrapper>
-    </SC.FlexWrapper>
+    <SC.Wrapper>
+        <SC.CloseButtonContainer>
+            <SC.StyledCloseButton onClick={closeModal}>X</SC.StyledCloseButton>
+        </SC.CloseButtonContainer>
+        <SC.ModalContent>
+            <StyledH1 noMargin={true} black={true}>Login to Nutri!</StyledH1>
+            <Form>
+                <Form.Field>
+                    <SC.StyledLabel>Username (usually an email address!)</SC.StyledLabel>
+                    <input placeholder='Username...'></input>
+                </Form.Field>
+                <Form.Field>
+                    <SC.StyledLabel>Password</SC.StyledLabel>
+                    <input placeholder='Password...'></input>
+                </Form.Field>
+                <SC.StyledButton type='submit'>
+                    <StyledH4>Login</StyledH4>
+                </SC.StyledButton>
+            </Form>
+            <a href="">No Account? Sign up for one here!</a>
+        </SC.ModalContent>
+    </SC.Wrapper>
   );
 };
 
