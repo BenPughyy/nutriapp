@@ -34,7 +34,7 @@ export const Wrapper = styled.div<{
   overflow-y: ${({ scrollable }) => (scrollable ? 'auto' : 'visible')};
 
   background-color: ${({ theme }) => theme.colors.system.white};
-  padding: ${({ theme, fullScreen }) => !fullScreen && theme.padding.xxxlarge};
+  padding: ${({ theme, fullScreen }) => !fullScreen && theme.padding.large};
 
   border: 1px solid ${({ theme }) => theme.colors.system.grey};
   border-radius: ${({ theme }) => theme.borders.radius};

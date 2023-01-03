@@ -30,26 +30,26 @@ const LoginModal: FC<LoginModalProps> = ({ setShowModal }) => {
 
   return (
     <SC.Wrapper>
-        <SC.ModalHeader>
+        <SC.CloseButtonContainer>
+            <SC.StyledCloseButton onClick={closeModal}>X</SC.StyledCloseButton>
+        </SC.CloseButtonContainer>
+        <SC.ModalContent>
             <StyledH1 noMargin={true} black={true}>Login to Nutri!</StyledH1>
-            <SC.CloseButtonContainer>
-                <SC.StyledCloseButton onClick={closeModal}>X</SC.StyledCloseButton>
-            </SC.CloseButtonContainer>
-        </SC.ModalHeader>
-        <Form>
-            <Form.Field>
-                <SC.StyledLabel>Username (usually an email address!)</SC.StyledLabel>
-                <input placeholder='Username...'></input>
-            </Form.Field>
-            <Form.Field>
-                <SC.StyledLabel>Password</SC.StyledLabel>
-                <input placeholder='Password...'></input>
-            </Form.Field>
-            <SC.StyledButton type='submit'>
-                <StyledH4>Login</StyledH4>
-            </SC.StyledButton>
-        </Form>
-      <a href="">No Account? Sign up for one here!</a>
+            <Form>
+                <Form.Field>
+                    <SC.StyledLabel>Username (usually an email address!)</SC.StyledLabel>
+                    <input placeholder='Username...'></input>
+                </Form.Field>
+                <Form.Field>
+                    <SC.StyledLabel>Password</SC.StyledLabel>
+                    <input placeholder='Password...'></input>
+                </Form.Field>
+                <SC.StyledButton type='submit'>
+                    <StyledH4>Login</StyledH4>
+                </SC.StyledButton>
+            </Form>
+            <a href="">No Account? Sign up for one here!</a>
+        </SC.ModalContent>
     </SC.Wrapper>
   );
 };

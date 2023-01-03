@@ -5,20 +5,11 @@ export const Wrapper = styled.div`
   padding-top: 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   text-align: center;
-  height: 250px;
+  height: 300px;
   max-height: 100%;
   width: 800px;
   max-width: 100%;
-`;
-
-export const ModalHeader = styled.div`
-  display: flex !important;
-  align-items: center !important;
-  justify-content: space-between !important;
-
 `;
 
 export const StyledButton = styled(Button)`
@@ -47,4 +38,10 @@ export const CloseButtonContainer = styled.div`
 
 export const StyledLabel = styled.label`
   font-family: 'Happy Monkey';
+`;
+
+export const ModalContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 `;
