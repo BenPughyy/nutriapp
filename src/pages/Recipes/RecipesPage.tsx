@@ -1,5 +1,5 @@
 import { FC, useEffect } from 'react';
-import { Card, Grid, Image } from 'semantic-ui-react';
+import { Grid, Image } from 'semantic-ui-react';
 
 //Hooks
 import useRecipes from '../../hooks/recipes/useRecipes';

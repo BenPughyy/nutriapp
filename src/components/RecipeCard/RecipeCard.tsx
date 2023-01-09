@@ -5,7 +5,13 @@ import { Card, Image } from 'semantic-ui-react';
 //Hooks
 import useRecipes from '../../hooks/recipes/useRecipes';
 
-const RecipeCard: FC = (title: string, description: string) => {
+//Props
+interface RecipeCardProps {
+title: string;
+description: string;
+};
+
+const RecipeCard: FC<RecipeCardProps> = ({title, description}) => {
 return (
     <Card>
         <Image
